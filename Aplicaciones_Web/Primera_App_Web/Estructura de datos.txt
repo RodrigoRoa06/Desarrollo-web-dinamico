@@ -1,0 +1,36 @@
+www=Carpeta raiz
+Contenido carpetas
+clase= se guarda el contenido que pasa argumentos a los constructores para implementar la interfaz o las interfaces
+procesos=Van los procesos de edicion de los usuarios y las categorias
+public=aqui se incluyen todas las librerias Externas que se incluiran
+vistas=va el codigo responsable de presentar los datos al usuario final
+Contenido archivos
+index.php=sera la pagina de inicio donde se colocara el menu y los accesos a la edicion de usuarios y categorias
+menu.php=este archivo se embebe dentro de index.php, ahi estan los accesos a los otros componentes de la aplicacion
+contactos.php=es la pagina de carga y edicion de los contactos
+categoria.php=es la pagina de carga y edicion de las categorias, que ayudaran a discriminar y listar los usuarios segun las necesidades particulares
+dependencias.php= desde ahi se cargaran los estilos css y scripts JS basicos,que no seran creados por nosotros y ayudara a accelerar el diseño final de la aplicacion
+
+descargas:
+
+
+base de datos:
+
+ create table t_categorias(id_categoria int not null auto increment primary key,nombre varchar(50),descripcion varchar(150));
+ create table t_contactos(id_contacto int not null auto_increment primary key,apellido_p varchar(50),apellido_m varchar(50),nombre varchar(50),telefono varchar(12).mail varchar(40),categoria varchar(30));
+ ________________________________________
+ Modifica la estrutura de una columna.  
+ ________________________________________
+ Alter table descripcion modify año year;
+ _________________________________________
+
+
+ Llenar tablas
+ Inser into "nombre de tablas"(campo a llenar,campo a llenar,campo a llenar) values (valor a llenar 1,valor a llenar2),(valor a llenar 1,valor a llenar 2);
+ ________________________________________
+
+ Actualizar multiples tablas 
+ update usuario,descripcion set usuario.dni='99999999',descripcion.anio=2022 where usuario.id_u=4 and usuario id_u=descripcion.id.us; 
+
+id_p int not null,id_m int not null,estado varchar(10), primary key (id_p,id_m) foreign key(id_p), foreign key(id_m)
+id_p int not null,id_m int not null,estado varchar(10), primary key (id_p,id_m) foreign key(id_p), foreign key(id_m)

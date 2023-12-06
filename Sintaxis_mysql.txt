@@ -1,0 +1,23 @@
+Crear foreign key:
+
+alter table nombre_tabla add constraint fk foreign key(fk) references nombre tabla_pk (pk);
+
+Hacer busquedas simples 
+
+select nombre,apellido,año,division from <Tabla>,<Tabla2> where alumno.id=10 and alumno.id_c=curso.id;
+
+busqueda con atributo que se repite en 2 tablas(llamado join, extraer datos de 3 tablas diferentes)
+
+select alumno.nombre,apellido,anio,division from alumno,curso,especialidad where alumno.id=10 and alumno.id_c=curso.id and curso.id_espe=especialidad.id;
+averiguar todos los alumnos con su nombre apellido y curso y especialidad qque sean de 6 y especialidad programacion y electro
+
+busqueda de datos en multiples tablas con join
+SELECT alumno.nombre, alumno.apellido, curso.anio, curso.division, especialidad.nombre 
+FROM alumno
+JOIN curso ON alumno.id_curso = curso.id_curso
+JOIN especialidad ON curso.id_especialidad = especialidad.id_especialidad
+WHERE curso.anio = 6 
+AND (especialidad.nombre = "programacion" OR especialidad.nombre = "electromecanica");
+Buscar a rodrigo roa a que especialidad pertenece
+
+ alumno.nombre,alumno.apellido,especialidad.nombre from alumno,curso,especialidad  where alumno.nombre="rodrigo" and alumno.apellido="roa" and alumno.id_c=curso.id and curso.id_espe=especialidad.id;
